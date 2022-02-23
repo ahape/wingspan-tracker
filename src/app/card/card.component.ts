@@ -1,5 +1,6 @@
 import { Input, Component, OnInit } from '@angular/core';
 import { Score } from "../score"
+import { Bird } from "../bird"
 import birds from "../birds"
 
 @Component({
@@ -8,6 +9,7 @@ import birds from "../birds"
 })
 export class CardComponent {
   @Input() score!: Score
+  selectedBird?: string
 
   birdOptions = [birds[0]] // Add an initial empty "placeholder" option
     .concat(birds.filter(b => b.Expansion === "originalcore"))

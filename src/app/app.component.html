@@ -21,7 +21,7 @@
   <div class="row mt-3">
     <div class="col" *ngFor="let score of scores.slice(0, 5)">
       <div class="card" 
-           style="border-color: green"
+           style="background-color: lightgreen"
            app-card
            [score]="score"></div>
     </div>
@@ -29,7 +29,7 @@
   <div class="row mt-2">
     <div class="col" *ngFor="let score of scores.slice(5, 10)">
       <div class="card" 
-           style="border-color: tan"
+           style="background-color: navajowhite"
            app-card
            [score]="score"></div>
     </div>
@@ -37,7 +37,7 @@
   <div class="row mt-2">
     <div class="col" *ngFor="let score of scores.slice(10, 15)">
       <div class="card" 
-           style="border-color: blue"
+           style="background-color: aqua"
            app-card
            [score]="score"></div>
     </div>
