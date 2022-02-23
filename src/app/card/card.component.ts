@@ -36,8 +36,8 @@ export class CardComponent {
 
   onCachedUpdate(up: boolean) {
     if (up)
-      this.score.tucked++
+      this.score.cached++
     else
-      this.score.tucked--
+      this.score.cached--
   }
 }
