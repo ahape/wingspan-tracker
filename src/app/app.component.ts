@@ -14,7 +14,6 @@ for (let i = 0; i < 15; i++)
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   scores = scores
