@@ -10,11 +10,12 @@ import birds from "../birds"
 export class CardComponent {
   @Input() score!: Score
 
-  birdOptions = [birds[0]].concat(birds.filter(b => b.Expansion === "originalcore"))
+  birdOptions = [birds[0]] // Add an initial empty "placeholder" option
+    .concat(birds.filter(b => b.Expansion === "originalcore"))
 
   onBirdChange(event: Event) {
-    const val = (event.target as HTMLInputElement).value
-    const bird = this.birdOptions.find(x => x["Common name"] === val)
+    const val = Number((event.target as HTMLInputElement).value)
+    const bird = this.birdOptions.find(x => x["id"] === val)
     if (bird)
       this.score.victoryPoints = bird["Victory points"] ?? 0
   }

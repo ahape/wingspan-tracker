@@ -1,7 +1,10 @@
 <div class="card-body">
   <select (change)="onBirdChange($event)" style="max-width: 200px">
-    <option *ngFor="let opt of birdOptions">
-    {{ opt['Common name'] }}
+    <option *ngFor="let opt of birdOptions"
+      [value]="opt.id">
+      <ng-container *ngIf="opt.id != 0">
+        {{ opt["Common name"] }} ({{ opt["Victory points"] || 0 }})
+      </ng-container>
     </option>
   </select>
   <div class="mt-2" style="user-select: none">
