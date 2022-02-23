@@ -1,0 +1,25 @@
+<div class="card-body">
+  <select (change)="onBirdChange($event)" style="max-width: 200px">
+    <option *ngFor="let opt of birdOptions">
+    {{ opt['Common name'] }}
+    </option>
+  </select>
+  <div class="mt-2" style="user-select: none">
+    Eggs: {{ score?.eggs }}
+    &nbsp;
+    <span role="button" (click)="onEggsUpdate(false)">⬇️</span> /
+    <span role="button" (click)="onEggsUpdate(true)">⬆️</span>
+  </div>
+  <div class="mt-2" style="user-select: none">
+    Tucked: {{ score?.tucked }}
+    &nbsp;
+    <span role="button" (click)="onTuckedUpdate(false)">⬇️</span> /
+    <span role="button" (click)="onTuckedUpdate(true)">⬆️</span>
+  </div>
+  <div class="mt-2" style="user-select: none">
+    Cached: {{ score?.cached }}
+    &nbsp;
+    <span role="button" (click)="onCachedUpdate(false)">⬇️</span> /
+    <span role="button" (click)="onCachedUpdate(true)">⬆️</span>
+  </div>
+</div>
